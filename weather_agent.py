@@ -1,21 +1,24 @@
 import json
 import requests
 from dotenv import load_dotenv
-from openai import OpenAI
+from langfuse.decorators import observe
+from langfuse.openai import openai
 import os
+
+
+from langsmith import traceable
 load_dotenv()
 
-client = OpenAI()
+# client = wrap_openai(OpenAI())
+client = openai.Client()
 
-def query_db(sql):
-    pass
-
+@observe()
 def run_command(command):
     result = os.system(command=command)
     return result
 
 
-
+@observe()
 def get_weather(city: str):
     # TODO!: Do an actual API Call
     print("🔨 Tool Called: get_weather", city)
@@ -27,6 +30,7 @@ def get_weather(city: str):
         return f"The weather in {city} is {response.text}."
     return "Something went wrong"
 
+@observe()
 def add(x, y):
     print("🔨 Tool Called: add", x, y)
     return x + y
