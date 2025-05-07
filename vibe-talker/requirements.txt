@@ -1,0 +1,5 @@
+audioop-lts==0.2.1
+SpeechRecognition==3.14.2
+standard-aifc==3.13.0
+standard-chunk==3.13.0
+typing_extensions==4.13.2

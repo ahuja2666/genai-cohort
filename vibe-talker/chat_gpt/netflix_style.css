@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background: url('https://assets.nflxext.com/ffe/siteui/vlv3/d3a996f3-60ff-4f45-8524-9d2475ddfbf4/6d63e3fa-4a3e-4e97-bf5c-4a80139a8542/US-en-20230626-popsignuptwoweeks-perspective_alpha_website_large.jpg') no-repeat center center/cover;
+    position: relative;
+    min-height: 100vh;
+}
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    z-index: 0;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 48px 0 48px;
+    z-index: 1;
+    position: relative;
+}
+.logo {
+    width: 140px;
+}
+.sign-in-btn {
+    background: #e50914;
+    color: #fff;
+    padding: 8px 18px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+.sign-in-btn:hover {
+    background: #f40612;
+}
+.main-content {
+    max-width: 700px;
+    margin: 130px auto 0 auto;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+}
+.main-content h1 {
+    font-size: 3.1rem;
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+.main-content h2 {
+    font-size: 1.6rem;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 26px;
+}
+.email-form p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+.form-row {
+    display: flex;
+    justify-content: center;
+}
+input[type="email"] {
+    padding: 14px;
+    width: 330px;
+    max-width: 100%;
+    border: none;
+    border-radius: 2px 0 0 2px;
+    outline: none;
+    font-size: 1rem;
+}
+button[type="submit"] {
+    background: #e50914;
+    color: #fff;
+    padding: 14px 36px;
+    border: none;
+    border-radius: 0 2px 2px 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+button[type="submit"]:hover {
+    background: #f40612;
+}
+@media (max-width: 600px) {
+    header {
+        padding: 18px 16px 0 16px;
+    }
+    .main-content {
+        margin: 80px 10px 0 10px;
+    }
+    .main-content h1 {
+        font-size: 2rem;
+    }
+}
